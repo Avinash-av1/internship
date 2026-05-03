@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive App Layout</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <h1>My App</h1>
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar" id="sidebar">
+        <h3>Menu</h3>
+        <ul>
+            <li>🏠 Home</li>
+            <li>👤 Profile</li>
+            <li>📦 Orders</li>
+            <li>⚙ Settings</li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <h2>Welcome</h2>
+        <p>Modern web development focuses on creating fast, responsive, and user-friendly websites.  
+Technologies like HTML, CSS, and JavaScript power the interactive web experiences we use every day.</p>
+    </main>
+
+</div>
+
+<footer class="footer">
+    <p>© 2026 Avinash | All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
