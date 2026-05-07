@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+}
+.hidden {
+    display: none;
+}
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: popupFade 0.4s ease;
+}
+@keyframes popupFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.home-screen {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.quiz-container {
+    background: white;
+    width: 420px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    font-weight: 600;
+}
+#timer {
+    color: red;
+}
+.option {
+    display: block;
+    background: #eee8e8;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.option:hover {
+    background: #e3e3e3;
+}
+.option.selected {
+    background: #d4edda;
+    border: 2px solid #28a745;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+button:hover {
+    background: #0056b3;
+    transform: scale(1.02);
+}
+#warning {
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+}

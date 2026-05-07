@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- WELCOME POPUP -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>👋 Welcome to the Quiz</h2>
+        <p>
+            Test your web development knowledge with this interactive quiz.
+        </p>
+
+        <button onclick="closePopup()">Continue</button>
+    </div>
+</div>
+
+<!-- HOME PAGE -->
+<div class="home-screen" id="homeScreen">
+    <h1>Web Development Quiz</h1>
+    <p>Challenge yourself and test your frontend skills.</p>
+
+    <button id="startBtn">Start Quiz</button>
+</div>
+
+<!-- QUIZ SECTION -->
+<div class="quiz-container hidden" id="quizContainer">
+
+   
+    <div class="top-bar">
+        <span id="progress">1/5</span>
+        <span id="timer">30s</span>
+    </div>
+
+    <h2 id="question">Question</h2>
+
+    <div class="options">
+
+        <label class="option">
+            <input type="radio" name="answer" value="a">
+            <span id="a_text"></span>
+        </label>
+
+        <label class="option">
+            <input type="radio" name="answer" value="b">
+            <span id="b_text"></span>
+        </label>
+
+        <label class="option">
+            <input type="radio" name="answer" value="c">
+            <span id="c_text"></span>
+        </label>
+
+        <label class="option">
+            <input type="radio" name="answer" value="d">
+            <span id="d_text"></span>
+        </label>
+
+    </div>
+
+    <!-- NEXT BUTTON -->
+    <button id="nextBtn">Next Question</button>
+
+    <p id="warning"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
