@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app-container">
+    <aside class="sidebar">
+        <h2>Menu</h2>
+        <input
+            type="text"
+            placeholder="Search..."
+            class="search-box"
+            id="searchInput"
+        >
+        <div class="menu-section">
+            <p class="menu-title">TASKS</p>
+            <ul>
+                <li class="menu-item active"
+                    onclick="setActive(this); filterTasks('today')">
+                    📋 Today
+                </li>
+                <li class="menu-item"
+                    onclick="setActive(this); filterTasks('upcoming')">
+                    📅 Upcoming
+                </li>
+                <li class="menu-item"
+                    onclick="setActive(this); filterTasks('important')">
+                    ⭐ Important
+                </li>
+            </ul>
+
+        </div>
+        <div class="menu-section">
+            <p class="menu-title">LISTS</p>
+            <ul>
+                <li class="menu-item"
+                    onclick="setActive(this); filterTasks('Work')">
+                    💼 Work
+                </li>
+                <li class="menu-item"
+                    onclick="setActive(this); filterTasks('Personal')">
+                    🏠 Personal
+                </li>
+                <li class="menu-item"
+                    onclick="setActive(this); filterTasks('Goals')">
+                    🎯 Goals
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <main class="main-content">
+        <div class="top-bar">
+            <h1 id="pageTitle">Today</h1>
+            <span id="taskCount">0 Tasks</span>
+        </div>
+        <div class="add-task">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Add New Task..."
+            >
+            <select id="categoryInput">
+                <option value="Work">
+                    Work
+                </option>
+                <option value="Personal">
+                    Personal
+                </option>
+                <option value="Goals">
+                    Goals
+                </option>
+            </select>
+            <input
+                type="date"
+                id="dateInput"
+            >
+            <button id="importantBtn">
+                ⭐
+            </button>
+            <button id="addBtn">
+                Add
+            </button>
+        </div>
+        <ul id="taskList"></ul>
+    </main>
+    <aside class="right-panel">
+        <h2>Task Details</h2>
+        <p>Select a task to view details.</p>
+        <div id="detailsBox">
+            <p>No task selected</p>
+        </div>
+    </aside>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
